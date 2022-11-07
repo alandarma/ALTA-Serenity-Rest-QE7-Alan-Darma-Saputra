@@ -1,9 +1,9 @@
 package starter.postcodes;
 
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.RestAssured;
-import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
@@ -24,5 +24,88 @@ public class PostCodeStepDefinitions {
         restAssuredThat(response -> response.statusCode(200));
         restAssuredThat(response -> response.body(LocationResponse.COUNTRY, equalTo(country)));
         restAssuredThat(response -> response.body(LocationResponse.FIRST_PLACE_NAME, equalTo(placeName)));
+    }
+
+    @And("Response body page should be <page>")
+    public void responseBodyPageShouldBePage() {
+    }
+
+    @And("Response body should contain name {string} and job {string}")
+    public void responseBodyShouldContainNameAndJob(String arg0, String arg1) {
+    }
+
+    @Given("put update user with valid json")
+    public void putUpdateUserWithValidJson() {
+    }
+
+    @When("send put update request")
+    public void sendPutUpdateRequest() {
+    }
+
+    @And("Put update user json schema validator")
+    public void putUpdateUserJsonSchemaValidator() {
+    }
+
+    @Given("Delete user with valid id <id>")
+    public void deleteUserWithValidIdId() {
+    }
+
+    @When("Send request delete user")
+    public void sendRequestDeleteUser() {
+    }
+
+    @Then("Should return {int} No Content")
+    public void shouldReturnNoContent(int arg0) {
+    }
+
+    @When("Send request get list user")
+    public void sendRequestGetListUser() {
+    }
+
+    @Then("Should return {int} OK")
+    public void shouldReturnOK(int arg0) {
+    }
+
+
+
+    @And("Get list user json schema validator")
+    public void getListUserJsonSchemaValidator() {
+    }
+
+    @Given("Post create new user")
+    public void postCreateNewUser() {
+    }
+
+    @When("Send request post create new user")
+    public void sendRequestPostCreateNewUser() {
+    }
+
+    @Then("Should return {int} created")
+    public void shouldReturnCreated(int arg0) {
+    }
+
+    @And("Post create new user json schema validator")
+    public void postCreateNewUserJsonSchemaValidator() {
+    }
+
+    @Given("Put update user with id <id>")
+    public void putUpdateUserWithIdId() {
+    }
+
+    @When("Send request put update user")
+    public void sendRequestPutUpdateUser() {
+    }
+
+
+    @And("Response body page should be <page>")
+    public void responseBodyPageShouldBePage() {
+    }
+
+    @Given("Put update user with id <id>")
+    public void putUpdateUserWithIdId() {
+    }
+
+    @Given("Delete user with valid id <id>")
+    public void deleteUserWithValidIdId() {
     }
 }
